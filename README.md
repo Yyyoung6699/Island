@@ -48,7 +48,7 @@ flowchart  TD;
 ### 1.Scene, Material and UI in Unity
 Water material, plant materials and animal materials.
 ![Island%20(6)](https://github.com/Yyyoung6699/Island/raw/main/Image/Island%20(6).png "Island%20(6)")
-![Island%20(4)]https://github.com/Yyyoung6699/Island/raw/main/Image/Island%20(4).png "Island%20(4)")
+![Island%20(4)](https://github.com/Yyyoung6699/Island/raw/main/Image/Island%20(4).png "Island%20(4)")
 ### 2.Code
 I have written all the code for the game's functions.And I've uploaded the code to github:https://github.com/Yyyoung6699/Island/tree/main/Complete%20code
 And here is the code for some of the main functions that I have selected (in case there are too many files):https://github.com/Yyyoung6699/Island/tree/main/Main%20code
