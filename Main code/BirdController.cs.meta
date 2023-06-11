@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 1bfd1f955eb38ce408dea0a227c43ef6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - BirdAudio: {fileID: 8300000, guid: c5e2a73ad4706440f93bf05df0b465fe, type: 3}
+  - buttonPre: {fileID: 1524897028134371141, guid: ee9394b886644fe468a5a1566f72ec8e, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
