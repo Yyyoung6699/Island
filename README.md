@@ -45,4 +45,98 @@ flowchart  TD;
 ```
 
 ## What I did in this Project
-### 1.Modeling
+### 1.Scene and Material in Unity
+### 2.Code
+I have written all the code for the game's functions.And I've uploaded the code to github:https://github.com/Yyyoung6699/Island/tree/main/Complete%20code
+And here is the code for some of the main functions that I have selected (in case there are too many files):https://github.com/Yyyoung6699/Island/tree/main/Main%20code
+1.TreeSpwan/GrassSpwan
+From the main camera ray to the mouse position, the material of the intersection is detected
+```ruby
+void RayCast()
+{
+    RaycastHit hit;
+    if (Physics.Raycast(cam.ScreenPointToRay(Input.mousePosition), out hit))
+    {
+        // Check if the raycast hit an object with the "Ground" tag
+        if (hit.collider.CompareTag("Ground"))
+        {
+            Vector3 hitPos = hit.point;
+            MeshCollider meshCollider = hit.collider as MeshCollider;
+
+            // Check if the collider has a mesh and retrieve it
+            if (meshCollider != null || meshCollider.sharedMesh != null)
+            {
+                mesh = meshCollider.sharedMesh;
+                Renderer renderer = hit.collider.GetComponent<MeshRenderer>();
+
+                // Get the indices of the triangle that was hit
+                int[] hitTriangle = new int[]
+                {
+                    mesh.triangles[hit.triangleIndex * 3],
+                    mesh.triangles[hit.triangleIndex * 3 + 1],
+                    mesh.triangles[hit.triangleIndex * 3 + 2]
+                };
+
+                // Iterate over all submeshes in the mesh
+                for (int i = 0; i < mesh.subMeshCount; i++)
+                {
+                    int[] subMeshTris = mesh.GetTriangles(i);
+
+                    // Iterate over each triangle in the submesh
+                    for (int j = 0; j < subMeshTris.Length; j += 3)
+                    {
+                        // Check if the current triangle matches the hit triangle
+                        if (subMeshTris[j] == hitTriangle[0] &&
+                            subMeshTris[j + 1] == hitTriangle[1] &&
+                            subMeshTris[j + 2] == hitTriangle[2])
+                        {
+                            mat = renderer.materials[i];
+
+                            // Log the index of the submesh
+                            Debug.Log(i);
+
+                            // Call a function with the submesh index and hit position
+                            LandCondition(i, hitPos);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+```
+Depending on the material, different plants are generated
+```ruby
+void SpawnPlants(GameObject spawnPla, Vector3 hitPos)
+    {
+        audioSource.PlayOneShot(Sound);
+        //int PlantsIndex = Random.Range(0, spawnPla.Length);
+        hitPos = hitPos + Vector3.up * spawnPla.transform.localScale.y / 2;
+        Instantiate(spawnPla, hitPos, Quaternion.identity);
+    }
+```
+2.Interaction
+By ray detection whether the GreenTree object hit, if hit, play animation, and based on the number of plants, generate animals
+```ruby
+ if (hit.collider.CompareTag("GreenTree"))
+            {
+                Score = Score + 1;
+                currentObject = hit.transform;
+                Debug.Log(currentObject.name);
+                Debug.Log(currentObject.position);
+                growleave = currentObject.GetComponent<Grow>();
+                growleave.PlayParticleEffect();
+                // 检查全局是否存在标记为"Animal"的对象
+                GameObject[] animals = GameObject.FindGameObjectsWithTag("Animal");
+                if (animals.Length > 0)
+                {
+                    Debug.Log("存在标记为'Animal'的对象");
+                }
+                else
+                {
+                    InsBird();
+                }
+            }
+```
+### 3.Animation in Unity
+
