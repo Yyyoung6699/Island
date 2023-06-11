@@ -51,6 +51,7 @@ I have written all the code for the game's functions.And I've uploaded the code 
 And here is the code for some of the main functions that I have selected (in case there are too many files):https://github.com/Yyyoung6699/Island/tree/main/Main%20code
 
 1.TreeSpwan/GrassSpwan
+
 From the main camera ray to the mouse position, the material of the intersection is detected
 ```ruby
 void RayCast()
@@ -117,6 +118,7 @@ void SpawnPlants(GameObject spawnPla, Vector3 hitPos)
     }
 ```
 2.Interaction
+
 By ray detection whether the GreenTree object hit, if hit, play animation, and based on the number of plants, generate animals
 ```ruby
  if (hit.collider.CompareTag("GreenTree"))
