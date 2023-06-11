@@ -46,7 +46,7 @@ flowchart  TD;
 
 ## What I did in this Project
 ### 1.Scene and Material in Unity
-
+![Island%20(2)](https://github.com/Yyyoung6699/Island/raw/main/Image/Island%20(2).png Island%20(2))
 ### 2.Code
 I have written all the code for the game's functions.And I've uploaded the code to github:https://github.com/Yyyoung6699/Island/tree/main/Complete%20code
 And here is the code for some of the main functions that I have selected (in case there are too many files):https://github.com/Yyyoung6699/Island/tree/main/Main%20code
