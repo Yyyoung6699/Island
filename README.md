@@ -1,5 +1,6 @@
 # ISLAND
 ## IMPORTANT
+![007](https://github.com/Yyyoung6699/Island/raw/main/Image/007.gif "007")
 
 Since the project file was too large to upload to GitHub, please visit the Google drive link:https://drive.google.com/drive/folders/1jOGc4t22C0EEfBVvQTgmi63AQ2Ziq-kU
 
