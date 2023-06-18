@@ -1,6 +1,7 @@
 # ISLAND
 ## IMPORTANT
 ![007](https://github.com/Yyyoung6699/Island/raw/main/Image/007.gif "007")
+![008](https://github.com/Yyyoung6699/Island/raw/main/Image/008.gif "008")
 
 Since the project file was too large to upload to GitHub, please visit the Google drive link:https://drive.google.com/drive/folders/1jOGc4t22C0EEfBVvQTgmi63AQ2Ziq-kU
 
@@ -113,6 +114,7 @@ void RayCast()
     }
 }
 ```
+![002](https://github.com/Yyyoung6699/Island/raw/main/Image/002.gif "002")
 Depending on the material, different plants are generated.
 ```ruby
 void SpawnPlants(GameObject spawnPla, Vector3 hitPos)
@@ -147,6 +149,7 @@ By ray detection whether the GreenTree object hit, if hit, play animation, and b
                 }
             }
 ```
+![001](https://github.com/Yyyoung6699/Island/raw/main/Image/001.gif "001")
 Generate the corresponding animal according to the plant, and play the sound effect, and light the achievement icon.
 ```ruby
 void InsBird()
@@ -172,6 +175,7 @@ void InsBird()
         }
     }
 ```
+![003](https://github.com/Yyyoung6699/Island/raw/main/Image/003.gif "003")
 3.BirdController(Different animals have different control codes)
 
 Control animal movements based on plant location, play animal sounds, and generate interaction buttons.
@@ -297,8 +301,9 @@ public void LookAtAppointTarget()
 }
 
 ```
+![005](https://github.com/Yyyoung6699/Island/raw/main/Image/005.gif "005")
 ### 3.Animation in Unity
 
 Animal models and animation source networks, which I adapted for AR. In addition, I made a fallen leaf particle animation.
 ![Island%20(5)](https://github.com/Yyyoung6699/Island/raw/main/Image/Island%20(5).png "Island%20(5)")
-![Island%20(7)](https://github.com/Yyyoung6699/Island/raw/main/Image/Island%20(7).png "Island%20(7)")
+![006](https://github.com/Yyyoung6699/Island/raw/main/Image/006.gif "006")
